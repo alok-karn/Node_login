@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </nav>
+
+    <h1>Login</h1>
+
+    <form action="/auth/login" method="POST">
+        <div class="mb-3">
+            <label for="email-log" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email-log" name="email">                        
+        </div>
+        <div class="mb-3">
+            <label for="password-log" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password-log" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+
+</body>
+</html>
