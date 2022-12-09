@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const login = async (email, passwrod) => {
+export const login = async (email, password) => {
   try {
-    const res = await axios.post('/auth/login', { email, passwrod });
+    const res = await axios.post('/auth/login', { email, password });
   } catch (error) {}
 };

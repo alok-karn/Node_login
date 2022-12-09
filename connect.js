@@ -99,7 +99,7 @@ app.post('/auth/register', (req, res) => {
         // return res.render('register', {
         //   message: 'This email address is already registered',
         // });
-        res.status(404).json({
+        res.status(401).json({
           status: false,
           message: 'This email address is already registered',
         });
