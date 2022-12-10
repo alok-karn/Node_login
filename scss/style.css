@@ -1,0 +1,1062 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: rgba(197, 250, 197, 0.2);
+}
+
+@-webkit-keyframes movedown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes movedown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.container {
+  margin-top: 1em;
+  position: relative;
+  padding: 0;
+  margin-left: -0.9em;
+}
+
+.sec-1 {
+  margin-top: -1em;
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgb(209, 209, 209), rgba(75, 131, 79, 0.7)), url(https://c0.wallpaperflare.com/preview/773/289/258/plant-leaf-overgrown-wall.jpg);
+  background-size: cover;
+}
+.sec-1 nav {
+  display: flex;
+  justify-content: space-between;
+}
+.sec-1 nav .logo {
+  margin-top: 0.5em;
+  margin-left: 2.75em;
+  height: 55px;
+  position: relative;
+}
+.sec-1 nav .logo:hover {
+  cursor: pointer;
+}
+.sec-1 nav span-1 {
+  position: relative;
+  margin-top: 0.6em;
+  margin-left: -8.3em;
+  margin-right: 8em;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(32, 32, 32);
+}
+.sec-1 nav span-1:hover {
+  cursor: pointer;
+}
+.sec-1 nav .menu-items {
+  position: relative;
+  margin-top: 1.5em;
+  margin-left: -28em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -moz-column-gap: 3em;
+       column-gap: 3em;
+  list-style-type: none;
+  font-size: 1em;
+  z-index: 999;
+}
+.sec-1 nav .menu-items .link {
+  text-decoration: none;
+  color: rgb(39, 39, 39);
+  font-weight: 600;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.sec-1 nav .menu-items .link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 50%;
+  height: 2px;
+  background-color: rgb(85, 141, 85);
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.sec-1 nav .menu-items .link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: 50%;
+  height: 2px;
+  background-color: rgb(85, 141, 85);
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.sec-1 nav .link:hover {
+  color: rgb(26, 138, 26);
+}
+.sec-1 nav .link:hover:before {
+  right: 0;
+}
+.sec-1 nav .link:hover:after {
+  left: 0;
+}
+.sec-1 nav .user-act {
+  margin-right: 2.75em;
+  margin-top: 1em;
+  width: 12em;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.sec-1 .search, .sec-1 .cart, .sec-1 .user, .sec-1 .menu-cta {
+  position: relative;
+  margin-top: 0.5em;
+  height: 24px;
+  width: 24px;
+  z-index: 999;
+}
+.sec-1 .search:hover path, .sec-1 .cart:hover path, .sec-1 .user:hover path, .sec-1 .menu-cta:hover path {
+  cursor: pointer;
+  fill: rgb(58, 141, 58);
+  transition: all ease 0.3s;
+}
+.sec-1 .menu-cta {
+  width: 28px;
+  height: 28px;
+}
+.sec-1 .search path, .sec-1 .cart path, .sec-1 .user path, .sec-1 .menu-cta path {
+  fill: rgb(32, 32, 32);
+}
+.sec-1 .content {
+  margin-top: -3.5em;
+  font-family: "Yeseva One", cursive, sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: movedown 1s ease-in-out forwards;
+          animation: movedown 1s ease-in-out forwards;
+  opacity: 0;
+}
+.sec-1 .content h1 {
+  margin-top: 1em;
+  font-size: 9.5em;
+  background-image: url(https://images.unsplash.com/photo-1610831006059-14fe16fe7ac4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM3fHxmbG93ZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.sec-1 .content h1:hover {
+  cursor: pointer;
+}
+.sec-1 .content .tagline {
+  margin-top: -2.8em;
+  font-size: 2.5rem;
+  color: rgb(13, 63, 13);
+}
+
+.sec-2 {
+  margin-top: -1em;
+  width: 100vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sec-2 .left-box {
+  position: relative;
+  margin-left: 3.5em;
+  margin-top: 2.5em;
+  padding: 1em;
+  width: 200px;
+  height: 180px;
+  -webkit-animation: movedown 1s ease-in-out forwards;
+          animation: movedown 1s ease-in-out forwards;
+  opacity: 0;
+}
+.sec-2 .left-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 98%;
+  width: 6px;
+  height: 100%;
+  background-color: rgb(86, 145, 86);
+  border-radius: 25px;
+}
+.sec-2 span-2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.sec-2 .btn-cta {
+  width: 8em;
+  padding: 0.4em;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(71, 141, 71);
+  background: none;
+  border: none;
+  outline: 2px solid black;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+.sec-2 .btn-cta::after {
+  background: rgb(71, 141, 71);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+.sec-2 .btn-cta:hover::after {
+  transform: translate(0, 0);
+}
+.sec-2 .btn-cta:hover {
+  cursor: pointer;
+  outline-color: transparent;
+  color: black;
+  transform: scale(1.05);
+  will-change: transform;
+}
+.sec-2 .right-box {
+  margin: 4em 0 4em 0;
+  width: 40em;
+  height: auto;
+  border-radius: 35px 0 0 35px;
+  background-image: linear-gradient(to left, #ffffff, rgb(122, 159, 122));
+  display: flex;
+  justify-content: space-around;
+}
+.sec-2 .right-box .sub-box1, .sec-2 .right-box .sub-box2, .sec-2 .right-box .sub-box3, .sec-2 .right-box .sub-box4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  width: 6em;
+  height: 6em;
+  border-radius: 25px;
+  background-color: rgb(164, 196, 164);
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.sec-2 .right-box .sub-box1:hover, .sec-2 .right-box .sub-box2:hover, .sec-2 .right-box .sub-box3:hover, .sec-2 .right-box .sub-box4:hover {
+  cursor: pointer;
+  transform: scale(1);
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+.sec-2 .right-box .sub-box3 {
+  background-color: rgb(183, 211, 183);
+}
+.sec-2 .right-box .sub-box4 {
+  background-color: rgb(223, 238, 223);
+}
+.sec-2 .right-box .pc1 {
+  margin-top: -6.5em;
+  height: 10em;
+  width: 10em;
+  filter: drop-shadow(1px 15px 16px rgb(97, 97, 97));
+}
+.sec-2 .right-box .pc2 {
+  margin-top: -4.5em;
+  height: 10em;
+  width: 12em;
+  filter: drop-shadow(1px 15px 16px rgb(97, 97, 97));
+}
+.sec-2 .right-box .pc3 {
+  margin-top: -6.5em;
+  width: 8em;
+  height: 10em;
+  filter: drop-shadow(1px 15px 16px rgb(97, 97, 97));
+}
+.sec-2 .right-box .pc4 {
+  width: 8em;
+  height: 10em;
+  margin-top: -6.5em;
+  filter: drop-shadow(1px 15px 16px rgb(97, 97, 97));
+}
+
+.sec-3 {
+  margin-top: -1em;
+  position: relative;
+  width: 100vw;
+  height: 58vh;
+  display: flex;
+  flex-direction: column;
+}
+.sec-3 .info-sec3 {
+  position: relative;
+  margin-left: 5.5em;
+  margin-right: 5.5em;
+  margin-top: -0.6em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.sec-3 .info-sec3 p {
+  font-family: "Yeseva One", cursive, sans-serif;
+  font-size: 20px;
+}
+.sec-3 .next-btn {
+  margin-top: 1.4em;
+  overflow: hidden;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.sec-3 .next-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(85, 141, 85);
+  transition: all ease 0.3s;
+}
+.sec-3 .next {
+  height: 14px;
+  width: 12px;
+  position: relative;
+}
+.sec-3 .product-card {
+  margin-top: -1em;
+  position: relative;
+  overflow: hidden;
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  width: 91.5vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.sec-3 .product-card .card-1, .sec-3 .product-card .card-2, .sec-3 .product-card .card-3, .sec-3 .product-card .card-4 {
+  position: relative;
+  overflow: hidden;
+  width: 190px;
+  height: 19.5em;
+  box-shadow: 0;
+  border-radius: 14px 14px 14px 14px;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.sec-3 .product-card .card-1:hover, .sec-3 .product-card .card-2:hover, .sec-3 .product-card .card-3:hover, .sec-3 .product-card .card-4:hover {
+  cursor: pointer;
+  transform: scale(1);
+  box-sizing: 5px 20px 30px rgba(58, 58, 58, 0.5);
+}
+.sec-3 .product-card .card-1 .card-container-1, .sec-3 .product-card .card-1 .card-container-2, .sec-3 .product-card .card-1 .card-container-3, .sec-3 .product-card .card-1 .card-container-4, .sec-3 .product-card .card-2 .card-container-1, .sec-3 .product-card .card-2 .card-container-2, .sec-3 .product-card .card-2 .card-container-3, .sec-3 .product-card .card-2 .card-container-4, .sec-3 .product-card .card-3 .card-container-1, .sec-3 .product-card .card-3 .card-container-2, .sec-3 .product-card .card-3 .card-container-3, .sec-3 .product-card .card-3 .card-container-4, .sec-3 .product-card .card-4 .card-container-1, .sec-3 .product-card .card-4 .card-container-2, .sec-3 .product-card .card-4 .card-container-3, .sec-3 .product-card .card-4 .card-container-4 {
+  width: 100%;
+  height: 100%;
+}
+.sec-3 .product-card .card-1 .card-container-1 .top-1, .sec-3 .product-card .card-1 .card-container-2 .top-1, .sec-3 .product-card .card-1 .card-container-3 .top-1, .sec-3 .product-card .card-1 .card-container-4 .top-1, .sec-3 .product-card .card-2 .card-container-1 .top-1, .sec-3 .product-card .card-2 .card-container-2 .top-1, .sec-3 .product-card .card-2 .card-container-3 .top-1, .sec-3 .product-card .card-2 .card-container-4 .top-1, .sec-3 .product-card .card-3 .card-container-1 .top-1, .sec-3 .product-card .card-3 .card-container-2 .top-1, .sec-3 .product-card .card-3 .card-container-3 .top-1, .sec-3 .product-card .card-3 .card-container-4 .top-1, .sec-3 .product-card .card-4 .card-container-1 .top-1, .sec-3 .product-card .card-4 .card-container-2 .top-1, .sec-3 .product-card .card-4 .card-container-3 .top-1, .sec-3 .product-card .card-4 .card-container-4 .top-1 {
+  height: 80%;
+  width: 100%;
+  background: url(../assets/orginals/andrew-reshetov-tXGOhiGBu5I-unsplash.jpg) no-repeat center center;
+  background-size: cover;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom, .sec-3 .product-card .card-1 .card-container-2 .bottom, .sec-3 .product-card .card-1 .card-container-3 .bottom, .sec-3 .product-card .card-1 .card-container-4 .bottom, .sec-3 .product-card .card-2 .card-container-1 .bottom, .sec-3 .product-card .card-2 .card-container-2 .bottom, .sec-3 .product-card .card-2 .card-container-3 .bottom, .sec-3 .product-card .card-2 .card-container-4 .bottom, .sec-3 .product-card .card-3 .card-container-1 .bottom, .sec-3 .product-card .card-3 .card-container-2 .bottom, .sec-3 .product-card .card-3 .card-container-3 .bottom, .sec-3 .product-card .card-3 .card-container-4 .bottom, .sec-3 .product-card .card-4 .card-container-1 .bottom, .sec-3 .product-card .card-4 .card-container-2 .bottom, .sec-3 .product-card .card-4 .card-container-3 .bottom, .sec-3 .product-card .card-4 .card-container-4 .bottom {
+  width: 200%;
+  height: 20%;
+  transition: transform 0.5s;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom.clicked, .sec-3 .product-card .card-1 .card-container-2 .bottom.clicked, .sec-3 .product-card .card-1 .card-container-3 .bottom.clicked, .sec-3 .product-card .card-1 .card-container-4 .bottom.clicked, .sec-3 .product-card .card-2 .card-container-1 .bottom.clicked, .sec-3 .product-card .card-2 .card-container-2 .bottom.clicked, .sec-3 .product-card .card-2 .card-container-3 .bottom.clicked, .sec-3 .product-card .card-2 .card-container-4 .bottom.clicked, .sec-3 .product-card .card-3 .card-container-1 .bottom.clicked, .sec-3 .product-card .card-3 .card-container-2 .bottom.clicked, .sec-3 .product-card .card-3 .card-container-3 .bottom.clicked, .sec-3 .product-card .card-3 .card-container-4 .bottom.clicked, .sec-3 .product-card .card-4 .card-container-1 .bottom.clicked, .sec-3 .product-card .card-4 .card-container-2 .bottom.clicked, .sec-3 .product-card .card-4 .card-container-3 .bottom.clicked, .sec-3 .product-card .card-4 .card-container-4 .bottom.clicked {
+  transform: translateX(-50%);
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom h1, .sec-3 .product-card .card-1 .card-container-1 .bottom p, .sec-3 .product-card .card-1 .card-container-2 .bottom h1, .sec-3 .product-card .card-1 .card-container-2 .bottom p, .sec-3 .product-card .card-1 .card-container-3 .bottom h1, .sec-3 .product-card .card-1 .card-container-3 .bottom p, .sec-3 .product-card .card-1 .card-container-4 .bottom h1, .sec-3 .product-card .card-1 .card-container-4 .bottom p, .sec-3 .product-card .card-2 .card-container-1 .bottom h1, .sec-3 .product-card .card-2 .card-container-1 .bottom p, .sec-3 .product-card .card-2 .card-container-2 .bottom h1, .sec-3 .product-card .card-2 .card-container-2 .bottom p, .sec-3 .product-card .card-2 .card-container-3 .bottom h1, .sec-3 .product-card .card-2 .card-container-3 .bottom p, .sec-3 .product-card .card-2 .card-container-4 .bottom h1, .sec-3 .product-card .card-2 .card-container-4 .bottom p, .sec-3 .product-card .card-3 .card-container-1 .bottom h1, .sec-3 .product-card .card-3 .card-container-1 .bottom p, .sec-3 .product-card .card-3 .card-container-2 .bottom h1, .sec-3 .product-card .card-3 .card-container-2 .bottom p, .sec-3 .product-card .card-3 .card-container-3 .bottom h1, .sec-3 .product-card .card-3 .card-container-3 .bottom p, .sec-3 .product-card .card-3 .card-container-4 .bottom h1, .sec-3 .product-card .card-3 .card-container-4 .bottom p, .sec-3 .product-card .card-4 .card-container-1 .bottom h1, .sec-3 .product-card .card-4 .card-container-1 .bottom p, .sec-3 .product-card .card-4 .card-container-2 .bottom h1, .sec-3 .product-card .card-4 .card-container-2 .bottom p, .sec-3 .product-card .card-4 .card-container-3 .bottom h1, .sec-3 .product-card .card-4 .card-container-3 .bottom p, .sec-3 .product-card .card-4 .card-container-4 .bottom h1, .sec-3 .product-card .card-4 .card-container-4 .bottom p {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-left, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-left, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-left, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-left, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-left, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-left, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-left, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-left, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-left, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-left, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-left, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-left, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-left, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-left, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-left, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-left {
+  height: 100%;
+  width: 50%;
+  background: #f4f4f4;
+  position: relative;
+  float: left;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-left .details, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-left .details, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-left .details, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-left .details, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-left .details, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-left .details, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-left .details, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-left .details, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-left .details, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-left .details, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-left .details, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-left .details, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-left .details, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-left .details, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-left .details, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-left .details {
+  padding: 10px 0 0 15px;
+  float: left;
+  width: calc(70% - 40px);
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-left .buy, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-left .buy, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-left .buy, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-left .buy, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-left .buy, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-left .buy, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-left .buy, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-left .buy, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-left .buy, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-left .buy, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-left .buy, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-left .buy, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-left .buy, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-left .buy, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-left .buy, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-left .buy {
+  float: right;
+  width: calc(30% - 2px);
+  height: 100%;
+  background: #f1f1f1;
+  transition: background 0.5s;
+  border-left: solid thin rgba(0, 0, 0, 0.1);
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-left .buy i, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-left .buy i, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-left .buy i, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-left .buy i, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-left .buy i, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-left .buy i, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-left .buy i, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-left .buy i, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-left .buy i, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-left .buy i, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-left .buy i, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-left .buy i, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-left .buy i, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-left .buy i, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-left .buy i, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-left .buy i {
+  font-size: 30px;
+  margin-top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  color: #254053;
+  transition: transform 0.5s;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-left .buy:hover, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-left .buy:hover {
+  background: rgb(204, 224, 204);
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-left .buy:hover i, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-left .buy:hover i {
+  transform: translateY(5px);
+  color: #00394B;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right {
+  width: 50%;
+  background: #a6cdde;
+  color: white;
+  float: right;
+  height: 200%;
+  overflow: hidden;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right .details, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right .details, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right .details, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right .details, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right .details, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right .details, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right .details, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right .details, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right .details, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right .details, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right .details, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right .details, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right .details, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right .details, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right .details, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right .details {
+  padding: 20px;
+  float: right;
+  width: calc(70% - 40px);
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right .done, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right .done, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right .done, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right .done, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right .done, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right .done, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right .done, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right .done, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right .done, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right .done, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right .done, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right .done, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right .done, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right .done, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right .done, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right .done {
+  width: calc(30% - 2px);
+  float: left;
+  transition: transform 0.5s;
+  border-right: solid thin rgba(255, 255, 255, 0.3);
+  height: 50%;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right .done i, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right .done i, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right .done i, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right .done i, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right .done i, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right .done i, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right .done i, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right .done i, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right .done i, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right .done i, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right .done i, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right .done i, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right .done i, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right .done i, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right .done i, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right .done i {
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right .remove, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right .remove, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right .remove, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right .remove, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right .remove, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right .remove, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right .remove, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right .remove, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right .remove, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right .remove, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right .remove, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right .remove, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right .remove, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right .remove, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right .remove, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right .remove {
+  width: calc(30% - 1px);
+  clear: both;
+  border-right: solid thin rgba(255, 255, 255, 0.3);
+  height: 50%;
+  background: #BC3B59;
+  transition: transform 0.5s, background 0.5s;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right .remove:hover, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right .remove:hover {
+  background: #9B2847;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right .remove:hover i, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right .remove:hover i {
+  transform: translateY(5px);
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right .remove i, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right .remove i, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right .remove i, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right .remove i, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right .remove i, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right .remove i, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right .remove i, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right .remove i, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right .remove i, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right .remove i, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right .remove i, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right .remove i, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right .remove i, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right .remove i, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right .remove i, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right .remove i {
+  transition: transform 0.5s;
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+.sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-1 .card-container-1 .bottom .btm-right:hover .done, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-1 .card-container-2 .bottom .btm-right:hover .done, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-1 .card-container-3 .bottom .btm-right:hover .done, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-1 .card-container-4 .bottom .btm-right:hover .done, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-2 .card-container-1 .bottom .btm-right:hover .done, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-2 .card-container-2 .bottom .btm-right:hover .done, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-2 .card-container-3 .bottom .btm-right:hover .done, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-2 .card-container-4 .bottom .btm-right:hover .done, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-3 .card-container-1 .bottom .btm-right:hover .done, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-3 .card-container-2 .bottom .btm-right:hover .done, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-3 .card-container-3 .bottom .btm-right:hover .done, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-3 .card-container-4 .bottom .btm-right:hover .done, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-4 .card-container-1 .bottom .btm-right:hover .done, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-4 .card-container-2 .bottom .btm-right:hover .done, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-4 .card-container-3 .bottom .btm-right:hover .done, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right:hover .remove, .sec-3 .product-card .card-4 .card-container-4 .bottom .btm-right:hover .done {
+  transform: translateY(-100%);
+}
+.sec-3 .product-card .card-1 .inside, .sec-3 .product-card .card-2 .inside, .sec-3 .product-card .card-3 .inside, .sec-3 .product-card .card-4 .inside {
+  z-index: 9;
+  background: rgb(122, 159, 122);
+  width: 124px;
+  height: 124px;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  border-radius: 0px 0px 300px 250px;
+  transition: all 0.5s, border-radius 2s, top 1s;
+  overflow: hidden;
+}
+.sec-3 .product-card .card-1 .inside .icon, .sec-3 .product-card .card-2 .inside .icon, .sec-3 .product-card .card-3 .inside .icon, .sec-3 .product-card .card-4 .inside .icon {
+  position: absolute;
+  right: 39px;
+  top: 38px;
+  color: white;
+  opacity: 1;
+}
+.sec-3 .product-card .card-1 .inside:hover, .sec-3 .product-card .card-2 .inside:hover, .sec-3 .product-card .card-3 .inside:hover, .sec-3 .product-card .card-4 .inside:hover {
+  width: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 0;
+  height: 80%;
+}
+.sec-3 .product-card .card-1 .inside:hover .icon, .sec-3 .product-card .card-2 .inside:hover .icon, .sec-3 .product-card .card-3 .inside:hover .icon, .sec-3 .product-card .card-4 .inside:hover .icon {
+  opacity: 0;
+  right: 15px;
+  top: 15px;
+}
+.sec-3 .product-card .card-1 .inside:hover .info-content, .sec-3 .product-card .card-2 .inside:hover .info-content, .sec-3 .product-card .card-3 .inside:hover .info-content, .sec-3 .product-card .card-4 .inside:hover .info-content {
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+.sec-3 .product-card .card-1 .inside .info-content, .sec-3 .product-card .card-2 .inside .info-content, .sec-3 .product-card .card-3 .inside .info-content, .sec-3 .product-card .card-4 .inside .info-content {
+  padding: 10%;
+  opacity: 0;
+  transform: scale(0.5);
+  transform: translateY(-200%);
+  transition: opacity 0.2s, transform 0.8s;
+}
+.sec-3 .product-card .card-1 .inside .info-content table, .sec-3 .product-card .card-2 .inside .info-content table, .sec-3 .product-card .card-3 .inside .info-content table, .sec-3 .product-card .card-4 .inside .info-content table {
+  text-align: left;
+  width: 100%;
+}
+.sec-3 .product-card .card-1 .inside .info-content h1, .sec-3 .product-card .card-1 .inside .info-content p, .sec-3 .product-card .card-1 .inside .info-content table, .sec-3 .product-card .card-2 .inside .info-content h1, .sec-3 .product-card .card-2 .inside .info-content p, .sec-3 .product-card .card-2 .inside .info-content table, .sec-3 .product-card .card-3 .inside .info-content h1, .sec-3 .product-card .card-3 .inside .info-content p, .sec-3 .product-card .card-3 .inside .info-content table, .sec-3 .product-card .card-4 .inside .info-content h1, .sec-3 .product-card .card-4 .inside .info-content p, .sec-3 .product-card .card-4 .inside .info-content table {
+  color: rgb(31, 31, 31);
+  font-size: 12px;
+}
+.sec-3 .product-card .card-1 .inside .info-content p, .sec-3 .product-card .card-2 .inside .info-content p, .sec-3 .product-card .card-3 .inside .info-content p, .sec-3 .product-card .card-4 .inside .info-content p {
+  font-size: 8px;
+}
+
+.card-container-2 .top-2 {
+  height: 80%;
+  width: 100%;
+  background: url(../assets/orginals/galina-n-miziNqvJx5M-unsplash.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.card-container-3 .top-3 {
+  height: 80%;
+  width: 100%;
+  background: url(../assets/orginals/stephanie-harvey-T0inbt7nRME-unsplash.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.card-container-4 .top-4 {
+  height: 80%;
+  width: 100%;
+  background: url(../assets/orginals/zobia-shakar-Qtso7p2tOI4-unsplash.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.add_to_cart {
+  width: 28px;
+  height: 28px;
+}
+
+.info-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.add_to_cart path, .info-icon path {
+  fill: rgb(58, 58, 58);
+}
+
+.sec-4 {
+  margin-top: -1em;
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+.sec-4 .info-sec4 {
+  position: relative;
+  margin-left: 5.5em;
+  margin-right: 5.5em;
+  margin-top: -0.6em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.sec-4 .info-sec4 p {
+  font-family: "Yeseva One", cursive, sans-serif;
+  font-size: 20px;
+}
+.sec-4 .more-btn {
+  margin-top: 1.4em;
+  margin-right: 0.81em;
+  overflow: hidden;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.sec-4 .more-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(85, 141, 85);
+  transition: all ease 0.3s;
+}
+.sec-4 .more-btn .next {
+  height: 14px;
+  width: 12px;
+  position: relative;
+}
+.sec-4 .gift-card {
+  margin-top: -1em;
+  position: relative;
+  overflow: hidden;
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  width: 91.5vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sec-4 .gift-card .gift-box1, .sec-4 .gift-card .gift-box4 {
+  position: relative;
+  overflow: hidden;
+  width: 24em;
+  height: auto;
+  border-radius: 12px;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.sec-4 .gift-card .gift-box1:hover, .sec-4 .gift-card .gift-box4:hover {
+  cursor: pointer;
+  transform: scale(1);
+  box-sizing: 5px 20px 30px rgba(58, 58, 58, 0.5);
+}
+.sec-4 .gift-card .gift-sec {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  width: 24em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  row-gap: 1.5em;
+  transform: scale(0.95);
+}
+.sec-4 .gift-card .gift-sec .gift-box2, .sec-4 .gift-card .gift-sec .gift-box3 {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.sec-4 .gift-card .gift-sec .gift-box2:hover, .sec-4 .gift-card .gift-sec .gift-box3:hover {
+  cursor: pointer;
+  transform: scale(1);
+  box-sizing: 5px 20px 30px rgba(58, 58, 58, 0.5);
+}
+.sec-4 .gift-card .gift-box1 {
+  background: url("../assets/images/gifiting5.jpg") no-repeat no-repeat;
+  background-size: 100%;
+}
+.sec-4 .gift-card .gift-box1::after {
+  content: "Price: $12";
+  position: absolute;
+  width: 6em;
+  top: 22.5em;
+  left: 16.2em;
+  color: rgb(39, 39, 39);
+  margin-right: -1em;
+  background-color: rgb(203, 204, 203);
+  padding: 4px 20px 4px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px 0 0 6px;
+}
+.sec-4 .gift-card .gift-box2 {
+  background: url("../assets/images/gifting2.jpg") no-repeat;
+  background-size: cover;
+}
+.sec-4 .gift-card .gift-box2::after {
+  content: "Price: $15";
+  position: absolute;
+  width: 6em;
+  top: 1.8em;
+  left: 16.2em;
+  color: rgb(255, 255, 255);
+  margin-right: -1em;
+  background-color: rgb(114, 114, 114);
+  padding: 4px 20px 4px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px 0 0 6px;
+}
+.sec-4 .gift-card .gift-box3 {
+  background: url("../assets/images/gifting3.jpg") no-repeat no-repeat;
+  background-size: 100%;
+}
+.sec-4 .gift-card .gift-box3::after {
+  content: "Price: $5";
+  position: absolute;
+  width: 6em;
+  top: 8.5em;
+  right: 17.1em;
+  color: rgb(255, 255, 255);
+  margin-right: -1em;
+  background-color: rgb(114, 114, 114);
+  padding: 4px 20px 4px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0px 6px 6px 0px;
+}
+.sec-4 .gift-card .gift-box4 {
+  background: url("../assets/images/gifting4.jpg") no-repeat no-repeat;
+  background-size: cover;
+  box-shadow: 0px 0px 0px rgba(167, 167, 167, 0.2);
+}
+.sec-4 .gift-card .gift-box4::after {
+  content: "Price: $25";
+  position: absolute;
+  width: 6em;
+  top: 22.5em;
+  left: 16.2em;
+  color: rgb(206, 206, 206);
+  margin-right: -1em;
+  background-color: rgb(44, 44, 44);
+  padding: 4px 20px 4px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px 0 0 6px;
+}
+
+.sec-5 {
+  margin-top: 8em;
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  background-color: rgb(123, 158, 123);
+  display: flex;
+}
+.sec-5 .img-deco1 {
+  position: relative;
+  margin-left: 5.5em;
+  margin-top: -5em;
+  width: 18em;
+  height: 24em;
+  background: url(https://images.unsplash.com/photo-1615309363679-fed456ff8113?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGxhbnQlMjBkZWNvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60) no-repeat no-repeat;
+  background-size: cover;
+  background-position: center -65px;
+}
+.sec-5 .img-deco1::after {
+  content: "";
+  position: absolute;
+  width: 12em;
+  height: 16.5em;
+  top: 15em;
+  left: 12em;
+  background: url(https://images.unsplash.com/photo-1603204077779-bed963ea7d0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fHBsYW50JTIwZGVjb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60) no-repeat no-repeat;
+  background-size: cover;
+  box-shadow: -10px 0px 70px rgba(0, 0, 0, 0.5);
+}
+.sec-5 .info-deco {
+  position: relative;
+  margin-right: 5.5em;
+  margin-left: 20em;
+  width: 35em;
+  height: auto;
+  float: right;
+  text-align: center;
+  padding: 0.5em;
+}
+.sec-5 .info-deco h1 {
+  margin-top: 0.5em;
+  font-size: 3em;
+  font-family: "Yeseva One", cursive, sans-serif;
+  text-transform: uppercase;
+  color: rgb(22, 22, 22);
+}
+.sec-5 .info-deco p {
+  margin-top: -1.2em;
+  font-size: 24px;
+  color: #1d1d1d;
+}
+.sec-5 .info-deco .btn-deco {
+  font-size: 1.3em;
+  border: none;
+  background: none;
+  font-weight: 700;
+  color: rgb(0, 44, 0);
+}
+.sec-5 .info-deco .btn-deco:hover {
+  cursor: pointer;
+  color: rgb(31, 77, 31);
+}
+.sec-5 .info-deco::after {
+  content: "";
+  margin: 0;
+  padding: 20px 10px 20px 0;
+  width: 20em;
+  height: 16em;
+  top: 8em;
+  position: absolute;
+  background: url("./../assets/bg-removed/palm-leaf.png") no-repeat no-repeat;
+  background-size: auto;
+  background-position-x: -50px;
+}
+
+.sec-6 {
+  margin-top: 3em;
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  background-color: #c1dbc7;
+  display: flex;
+  justify-content: flex-end;
+  background: url(".././assets/orginals/9k.png") no-repeat no-repeat;
+  background-size: cover;
+}
+.sec-6 .care-box {
+  margin-right: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+.sec-6 .care-box h1 {
+  margin: 20px auto 0 auto;
+  font-size: 2.2em;
+  color: rgb(44, 44, 44);
+  font-family: "Yeseva One", cursive, sans-serif;
+  font-weight: lighter;
+}
+.sec-6 .care-box .care-sub-box {
+  margin-top: -12px;
+  width: 40em;
+  height: 20em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sec-6 .care-box .care-sub-box .sub-box-1, .sec-6 .care-box .care-sub-box .sub-box-2, .sec-6 .care-box .care-sub-box .sub-box-3, .sec-6 .care-box .care-sub-box .sub-box-4 {
+  padding: 5px 5px 0 5px;
+  width: 18em;
+  height: 10em;
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.sec-6 .care-box .care-sub-box .sub-box-1 .image, .sec-6 .care-box .care-sub-box .sub-box-2 .image, .sec-6 .care-box .care-sub-box .sub-box-3 .image, .sec-6 .care-box .care-sub-box .sub-box-4 .image {
+  margin: auto;
+  width: 250px;
+  height: 120px;
+  background: url("../assets/icons/plant (1).png") no-repeat no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.sec-6 .care-box .care-sub-box .sub-box-1 .sub-sec, .sec-6 .care-box .care-sub-box .sub-box-2 .sub-sec, .sec-6 .care-box .care-sub-box .sub-box-3 .sub-sec, .sec-6 .care-box .care-sub-box .sub-box-4 .sub-sec {
+  margin: auto;
+}
+.sec-6 .care-box .care-sub-box .sub-box-1 .sub-sec .care-btn, .sec-6 .care-box .care-sub-box .sub-box-2 .sub-sec .care-btn, .sec-6 .care-box .care-sub-box .sub-box-3 .sub-sec .care-btn, .sec-6 .care-box .care-sub-box .sub-box-4 .sub-sec .care-btn {
+  margin-bottom: 16px;
+  background: none;
+  padding: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgb(8, 136, 8);
+  border: none;
+}
+.sec-6 .care-box .care-sub-box .sub-box-1 .sub-sec .care-btn:hover, .sec-6 .care-box .care-sub-box .sub-box-2 .sub-sec .care-btn:hover, .sec-6 .care-box .care-sub-box .sub-box-3 .sub-sec .care-btn:hover, .sec-6 .care-box .care-sub-box .sub-box-4 .sub-sec .care-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.sec-6 .care-box .care-sub-box .sub-box-1 .sub-sec p, .sec-6 .care-box .care-sub-box .sub-box-2 .sub-sec p, .sec-6 .care-box .care-sub-box .sub-box-3 .sub-sec p, .sec-6 .care-box .care-sub-box .sub-box-4 .sub-sec p {
+  margin-top: -12px;
+  font-size: 0.95em;
+  line-height: 1.2em;
+}
+.sec-6 .care-box .care-sub-box .sub-box-2 .image {
+  width: 150px;
+  height: 90px;
+  background: url("../assets/icons/plants.png") no-repeat no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.sec-6 .care-box .care-sub-box .sub-box-3 {
+  margin-top: -50px;
+  padding-top: 0;
+}
+.sec-6 .care-box .care-sub-box .sub-box-3 .image {
+  width: 200px;
+  height: 90px;
+  background: url("../assets/icons/plant-pot.png") no-repeat no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.sec-6 .care-box .care-sub-box .sub-box-4 {
+  margin-top: -50px;
+  padding-top: 0;
+}
+.sec-6 .care-box .care-sub-box .sub-box-4 .image {
+  width: 200px;
+  height: 90px;
+  background: url("../assets/icons/plant.png") no-repeat no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.sec-6::after {
+  content: "";
+  margin-left: 5.5em;
+  position: absolute;
+  width: 22em;
+  height: 20em;
+  top: 4.1em;
+  right: 62em;
+  background: url("../assets/bg-removed/monstera.png") no-repeat no-repeat;
+  background-size: contain;
+}
+
+.sec-7 {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  -moz-column-gap: 5em;
+       column-gap: 5em;
+  overflow: hidden;
+}
+.sec-7 .about-us {
+  position: relative;
+  margin-left: 5.5em;
+  width: 80em;
+}
+.sec-7 .about-us h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: "Yeseva One", cursive, sans-serif;
+  color: #131212;
+}
+.sec-7 .about-us .sub-head {
+  font-weight: bold;
+}
+.sec-7 .about-img {
+  position: relative;
+  margin-top: 2.5em;
+  margin-right: 5.5em;
+  width: 30em;
+  height: 25em;
+  background: url(https://images.unsplash.com/photo-1555955208-94f6fafea771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2FyZGVuaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60) no-repeat no-repeat;
+  background-size: cover;
+  box-shadow: 45px 40px 1px rgb(26, 65, 15);
+}
+.sec-7 .about-img::after {
+  content: "";
+  position: absolute;
+  width: 10.7em;
+  height: 20em;
+  top: 7.5em;
+  left: 11em;
+  background: url(".././assets/bg-removed/palm-leaf2.png") no-repeat no-repeat;
+  background-size: cover;
+  transform: rotate(0deg);
+}
+
+footer {
+  position: relative;
+  width: 100vw;
+  height: 55vh;
+  background: rgb(123, 158, 123);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container {
+  margin-left: 5.5em;
+  margin-right: 5.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  -moz-column-gap: 5em;
+       column-gap: 5em;
+}
+footer .footer-container .news-letter {
+  width: 300px;
+  height: auto;
+}
+footer .footer-container .news-letter h2 {
+  text-transform: uppercase;
+}
+footer .footer-container .news-letter input[type=email] {
+  width: 14em;
+  font-size: 1em;
+  padding: 5px;
+  border: none;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background: rgb(221, 221, 221);
+  border-radius: 5px;
+  outline: none;
+}
+footer .footer-container .news-letter .signup-btn {
+  font-size: 0.9em;
+  width: auto;
+  float: right;
+  margin-top: 0em;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  outline: 2px solid black;
+}
+footer .footer-container .news-letter .signup-btn:hover {
+  cursor: pointer;
+  background-color: rgb(26, 138, 26);
+  color: rgb(196, 195, 195);
+  outline: none;
+}
+footer .social {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+  width: auto;
+  height: 2.5em;
+}
+footer .social .fbb:hover, footer .social .tww:hover, footer .social .ytt:hover, footer .social .instt:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(68, 107, 68);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.3) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, 0.3) 80%);
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */

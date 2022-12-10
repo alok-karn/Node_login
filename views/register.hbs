@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/register.css">
+    <link rel="icon" href="../../assets/bg-removed/Screenshot_2022-06-12_145318-removebg-preview.png">
+    <title>Register to citoxe </title>
+
+<script>
+validateName = () => {
+    var name = document.getElementById("name").value;
+    var regex = /^[a-zA-Z ]{2,30}$/;
+    if (regex.test(name)) {
+        document.getElementById("warning").innerHTML = "";
+    } else {
+        document.getElementById("warning").innerHTML = "Name should contain only alphabets";
+    }
+}
+
+function checkPasswordLength() {
+  var password = document.getElementById("password").value;
+  var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+  if (regex.test(password) == false) {
+    document.getElementById("warning").innerHTML = "Password must be at least 8 characters long, and must contain at least one lowercase letter, one uppercase letter, one digit, and one special character";
+  } else {
+    document.getElementById("warning").innerHTML = "";
+  }
+}
+
+checkEmail = () => {
+    var email = document.getElementById("email").value;
+  var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (regex.test(email)) {
+    document.getElementById("warning").innerHTML = "";
+  } else {
+    document.getElementById("warning").innerHTML = "Please enter proper email address";
+  }
+}
+
+validatePass = () => {
+    var password = document.getElementById("password").value;
+    var password_confirm = document.getElementById("password_confirm").value;
+    if (password != password_confirm) {
+        document.getElementById("warning").innerHTML = "Re-check your password";
+    } else {
+        document.getElementById("warning").innerHTML = "";
+    }
+}
+
+clear = () => {
+    document.getElementById("warning").innerHTML = "";
+}
+
+</script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="upHeading">
+                CITOXE
+            </div>
+            <div class="heading">
+                Create Account
+            </div>
+
+            <form action="/auth/register" method="post">
+                <span class="up">
+                    Name*
+                </span>
+                <div class="input-field">
+                    <input type="text" name="name" id="name" onkeyup = "validateName()" required>
+                </div>
+                
+                
+                <span class="up">
+                    Email Address*
+                </span>
+                <div class="input-field">
+                    <input type="text" name="email" id="email" onkeyup="checkEmail()" required>
+                </div>
+
+                <span class="up">
+                    Password*
+                </span>
+                <div class="input-field">
+                    <input type="password" name="password" id="password" onkeyup="checkPasswordLength()" required>
+                </div>
+
+                <span class="up">
+                    Confirm Password*
+                </span>
+                <div class="input-field">
+                    <input type="password" name="password_confirm" id="password_confirm" onkeyup="validatePass()" required>
+                </div>
+
+                <div class="button">
+                    <button type="submit">Continue</button>
+                </div>
+
+                <p id="signin">
+                    Already have an account? <a href="/login"> &nbsp;Sign in</a>
+                </p>
+
+                <p id="warning">
+                </p>
+
+            </form>
+
+        </div>
+        <div class="right-container">
+            <div class="image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/bg-removed/Screenshot_2022-06-12_145318-removebg-preview.png">
+    <link rel="stylesheet" href="/login.css">
+    <title>login</title>
+
+    <script>
+
+function checkPasswordLength() {
+  var password = document.getElementById("password").value;
+  var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+  if (regex.test(password) == false) {
+    document.getElementById("warning").innerHTML = "Password must be at least 8 characters long, and must contain at least one lowercase letter, one uppercase letter, one digit, and one special character";
+  } else {
+    document.getElementById("warning").innerHTML = "";
+  }
+}
+
+checkEmail = () => {
+    var email = document.getElementById("email").value;
+  var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (regex.test(email)) {
+    document.getElementById("warning").innerHTML = "";
+  } else {
+    document.getElementById("warning").innerHTML = "Please enter proper email address";
+  }
+}
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+
+        </div>
+        <div class="right-container">
+            
+            <div class="heading">
+                <h1>Welcome back</h1>
+            </div>
+
+            <div class="sub-heading">
+                <p>
+                    Plants for your home, for your soul <br>
+                   <span> Connect with nature, connect with us</span>
+                </p>
+            </div>
+
+            <div class="form-container">
+                <form action="/auth/login" method="post">
+
+                    <span class="up">
+                        Email Address*
+                    </span>
+                    <div class="input-field">
+                        <input type="text" name="email" id="email" onkeyup="checkEmail()" required>
+                    </div>
+    
+                    <span class="up">
+                        Password*
+                    </span>
+                    <div class="input-field">
+                        <input type="password" name="password" id="password" onkeyup="checkPasswordLength()" required>
+                    </div>
+
+                    
+                <div class="button">
+                    <button type="submit">Sign in</button>
+                </div>
+
+                <p id="signup">
+                    Don't have an account? <a href="/register">&nbsp; Sign up</a>
+                </p>
+
+                <p id="warning">
+                </p>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
