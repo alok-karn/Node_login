@@ -14,7 +14,7 @@ const db = mysql.createConnection({
   port: 3300,
 });
 
-const publicDir = path.join(__dirname, 'public');
+const publicDir = path.join(__dirname, './public');
 
 app.use(express.static(publicDir));
 app.use(express.urlencoded({ extended: false }));
@@ -24,7 +24,7 @@ app.use(express.json());
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'html');
 
-app.set('view engine', 'pug');
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 db.connect((error) => {
